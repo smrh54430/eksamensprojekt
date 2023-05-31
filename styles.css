@@ -1,0 +1,259 @@
+.body {
+margin: auto;
+padding: 5px;
+	}
+
+.header {
+	background-color: pink;
+	color: black;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 50px;
+	padding: 40px;
+	display: flex;
+	justify-content: center;
+	font-size: 4em; /* bruger em enhed til at gøre størrelsen relativ */
+	font-style: italic;
+	animation-name: animateHeader;
+	animation-duration: 4.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	position: relative; /* Tilføjet position: relative for at bevare responsivitet */
+}
+
+@keyframes animateHeader {
+	50% {
+		transform: translateX(50px);
+	}
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    font-size: 2em;
+  }
+}
+.tagline {
+	display: flex;
+	color: black;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	background: linear-gradient(to right, rgba(255, 0, 0, 0.821), rgba(255, 166, 0, 0.918), rgba(255, 255, 0, 0.829), rgba(0, 128, 0, 0.795), rgba(0, 0, 255, 0.723), rgba(128, 0, 128, 0.722));
+	padding: 3%;
+	font-family: sans-serif;
+
+}
+
+.tekst1 {
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+	color: black;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	font-size: 30px;
+}
+
+.menu {
+	display: flex;  /* Bruger Flexbox til at oprette en fleksibel container */
+	justify-content: flex-end;  /* Justerer elementerne i containeren til højre */
+	align-items: center;  /* Centrerer elementerne vertikalt */
+	padding: 0px;  /* Ingen polstring på containeren */
+	border-bottom: 0.5px solid black;  /* Skaber en sort streg i bunden af containeren */
+	font-family: sans-serif;
+
+}
+
+.menu li { /*bruges til at anvende styling på selve listeelementerne, som f.eks. margin, border-radius og display*/
+	display: inline-flex;  /* Gør listeelementerne til inline flekselementer */
+	margin-left: 50px;  /* Tilføjer venstre margen på 50px mellem listeelementerne */
+}
+
+.menu a { /* for at anvende styling på ankerlinks i menuen, såsom farve, skriftstørrelse og padding*/
+	color: black;  
+	text-decoration-color: pink;  /* Sætter understregningsfarven til pink */
+	font-size: 20px;  
+	font-weight: bold;  /* Gør teksten fed */
+	padding: 1px 1px;  /* Tilføjer 1 pixel padding på toppen og bunden samt venstre og højre af teksten */
+	border-radius: 10px;  /* Afrunder hjørnerne af linket med 10 pixels afrundingsradius */
+	transition: all 0.2s ease-in;  /* Tilføjer en overgangseffekt på alle CSS-egenskaber i løbet af 0.2 sekunder med en jævn indgang */
+}
+
+.menu a:hover {
+	text-decoration:pink;
+	background-color: pink;  
+}
+
+.tekst2 {
+		color: black;
+		display: flex;
+		justify-content: flex-start; /* Justerer til venstre side */
+		align-items: center;
+		padding: 0px;
+		font-size: 20px;
+		font-family: sans-serif;
+		margin: 10px;
+		padding: 0px;
+		line-height: 1.5;
+}
+.mig{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+}
+.container {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(300px, 1fr)); /* dynamic columns minimum width 300px */
+		justify-content: center;
+		grid-gap: 10px;
+		padding: 5%;
+		background: linear-gradient(to bottom, pink,white, pink);
+}
+.container.box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #f2f2f2;
+		padding: 0;
+}
+.container.box img {
+		object-fit: cover;
+		width: 100%;
+		max-height: 350px; /* øget billedehøjde */
+		justify-content: center;
+		object-fit: cover;
+}
+
+.image-box1,
+.image-box2,
+.image-box3,
+.image-box4,
+.image-box5,
+.image-box6 {
+	position: relative;
+	width: 100%; /* boksens bredde */
+	height: 350px; /* boksens højde */
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	object-fit: contain;
+}
+.image-box1 img,
+.image-box2 img,
+.image-box3 img,
+.image-box4 img,
+.image-box5 img,
+.image-box6 img {
+	width: 100%;
+	height: 350px;
+	object-fit: contain; /* 'contain' for at undgå afskæring af billede */
+}
+/* Media query til mindre skærme */
+@media (max-width: 768px) {
+	.container {
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* reducerer antallet af kolonner og justerer minimumsbredden for bokse */
+	}
+}
+
+.image-text1,
+.image-text2,
+.image-text3,
+.image-text4,
+.image-text5,
+.image-text6 {
+		position: absolute; 
+		top: 0; /*position af tekst på billederne*/
+		left: 0;
+		width: 100%;
+		text-align: center;
+		font-size: 20px;
+		color: black;
+		padding: 5px; /*Størrelse på tekstboksen*/
+		background-color: rgba(242, 242, 242, 0.7); /*Gennemsigtig boks*/
+		border-radius: 20px; /*Afgrundig i hjørnerne*/
+		margin: 0;
+		font-family: sans-serif;
+
+}
+.tekst3{
+		color: black;
+		display: flex;
+		justify-content: center; /* placering */
+		align-items: center;
+		padding: 5px;
+		font-family: sans-serif;
+		font-size: 20px;
+
+	}
+.tekst4{
+		color: black;
+		display: flex;
+		justify-content: center; /* placering */
+		align-items: center;
+		padding: 5px;
+		font-size: 20px;
+		font-family: sans-serif;
+		line-height: 1.5;
+
+	}
+/* Responsivt layout til telefoner */
+@media (max-width: 670px) {
+	.footer {
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* reducerer antallet af kolonner og justerer minimumsbredden for bokse */
+	}
+}
+	.tekst5 {
+		color: black;
+		text-align: center;
+		align-items: center;
+		padding: 5px;
+		font-family: sans-serif;
+		font-size: 20px;
+	}
+
+	.tekst6{
+		display: flex;
+		color: black;
+		text-align: center;
+		align-items: center;
+		padding: 5px;
+		font-family: sans-serif;
+		font-size: 20px;
+	}
+	.oplysninger {
+		font-family: sans-serif;
+		font-size: 20px;
+		color: black;
+		line-height: 1.5;
+		text-align: center;
+		align-items: center;
+	}
+
+	.kontakt {
+		font-family: sans-serif;
+		color: black;
+		text-align: center;
+		line-height: 1.5;
+		font-size: 20px;
+	}
+	.oplysninger {
+		justify-content: flex-end; /*skubber teksten til højre*/
+		line-height: 1.5;
+		text-align: center;
+		font-family: sans-serif;
+		font-size: 20px;
+	}
+	footer{
+		background-color: pink;
+		text-align: center;
+	}
+	
+	h1,h2,h3,h4,h5 {
+		font-size: 40px;
+	} 
+
